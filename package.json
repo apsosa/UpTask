@@ -1,0 +1,24 @@
+{
+  "name": "uptasknodejs",
+  "version": "1.0.0",
+  "description": "Proyecto Uptask con Node y MVC",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pato091/uptask.git"
+  },
+  "author": "Patricio Sosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pato091/uptask/issues"
+  },
+  "homepage": "https://github.com/pato091/uptask#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "pug": "^3.0.2"
+  }
+}
