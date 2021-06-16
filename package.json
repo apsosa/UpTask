@@ -18,7 +18,13 @@
   "homepage": "https://github.com/pato091/uptask#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "mysql2": "^2.2.5",
     "nodemon": "^2.0.7",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "sequelize": "^6.6.2",
+    "sequelize-cli": "^6.2.0",
+    "shortid": "^2.2.16",
+    "slug": "^5.1.0"
   }
 }

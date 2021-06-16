@@ -2,6 +2,20 @@ const express = require('express');
 const routes = require('./routes');
 const path  = require('path');
 
+
+
+//helpers con algunas funciones
+const helpers = require('./helpers');
+
+//Crear la conexion a la BD
+const db = require('./config/db');
+
+//importar el modelo
+require('./models/Proyectos');
+
+db.sync()
+    .then(()=> console.log('Conectado al Servidor'))
+    .catch(error => console.log(error));
 //crear una app de express
 const app = express();
 
@@ -13,6 +27,12 @@ app.set('view engine','pug');
 
 //Añadimos la carpeta de las vistas
 app.set('views',path.join(__dirname,'./views'));
+
+//Pasar var dump
+app.use((req,res,next)=>{
+    res.locals.vardump = helpers.vardump;
+    next();
+});
 
 //habilitar bodyparser para leer datos del formulario
 app.use(express.urlencoded({extended: false}));
