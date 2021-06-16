@@ -1,0 +1,15 @@
+{
+  "name": "source-map-resolve",
+  "homepage": "https://github.com/lydell/source-map-resolve",
+  "version": "0.6.0",
+  "_release": "0.6.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.6.0",
+    "commit": "e6cbc9a91d8bf683c3c57db9a170140290b5fd5c"
+  },
+  "_source": "https://github.com/lydell/source-map-resolve.git",
+  "_target": "^0.6.0",
+  "_originalSource": "source-map-resolve",
+  "_direct": true
+}
