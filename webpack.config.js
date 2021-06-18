@@ -15,7 +15,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presents: ["@babel/present-env"],
+            presets: ["@babel/preset-env"],
           },
         },
       },

@@ -30,7 +30,6 @@ if(btnEiminar){
                             respuesta.data,
                             'success'
                         );
-                        
                         //redireccionar al inicio
                         setTimeout(()=> {
                             window.location.href = "/"

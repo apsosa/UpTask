@@ -117,9 +117,14 @@ exports.eliminarProyecto = async(req,res,next)=>{
     //req. query o params,
     //console.log(req.query);
     const {urlProyecto} = req.query;
-    const resultado = await Proyectos.destroy({where:{url:urlProyecto}});
-    if (!resultado) {
-        return next();
+    try {
+        const resultado = await Proyectos.destroy({where:{url:urlProyecto}});
+        if (!resultado) {
+            return next();
+        }
+        res.status(200).send('Proyecto Eliminado Correctamente');
+    } catch (error) {
+        
     }
-    res.status(200).send('Proyecto Eliminado Correctamente');
+    
 }
