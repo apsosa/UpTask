@@ -1,5 +1,7 @@
 import axios from "axios";
 import Swal from 'sweetalert2';
+import {actualizarAvance} from '../funciones/avance';
+
 const tareas = document.querySelector('.listado-pendientes');
 
 if (tareas) {
@@ -10,11 +12,12 @@ if (tareas) {
             
             //request hacias /tareas/:id
             const url = `${location.origin}/tareas/${idTarea}`;
-
+            //aca se cambiae el estado de una tarea
             axios.patch(url,{idTarea})
                 .then(function(respuesta){
                     if (respuesta.status == 200) {
                         icono.classList.toggle('completo');
+                        actualizarAvance();
                     }
                 })
         }
@@ -47,6 +50,7 @@ if (tareas) {
                                 respuesta.data,
                                 'success'
                             );
+                            actualizarAvance();
                             //redireccionar al inicio
                             // setTimeout(()=> {
                             //     window.location.href = `${location.origin}/`
