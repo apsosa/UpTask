@@ -10,7 +10,7 @@ const Tareas = db.define('tareas',{
         autoIncrement: true
     },
     tarea: Sequelize.STRING(100),
-    estado: Sequelize.INTEGER
+    estado: Sequelize.INTEGER(1)
 })
 Tareas.belongsTo(Proyectos);
 module.exports = Tareas;
