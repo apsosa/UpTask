@@ -74,5 +74,4 @@ exports.confirmarCuenta = async (req,res) => {
     
     req.flash('correcto','Cuenta activada correctamente');
     res.redirect('/iniciar-sesion');
-
 }
